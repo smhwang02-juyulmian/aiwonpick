@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 원픽 (AI Wonpick)</title>
+<style>
+  :root { --bg:#07070d; --card:#12121c; --text:#ececf4; --muted:#9a9ab0; --cyan:#00d4ff; --gold:#ffd700; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:"Malgun Gothic",system-ui,sans-serif; line-height:1.7; }
+  main { max-width:760px; margin:0 auto; padding:48px 20px; }
+  h1 { font-size:2.4rem; margin:0; } h1 .ai { color:#fff; text-shadow:0 0 18px var(--cyan); } h1 .pick { color:var(--gold); }
+  h2 { color:var(--cyan); margin-top:2.2rem; font-size:1.2rem; }
+  .card { background:var(--card); border-radius:14px; padding:20px 24px; margin-top:16px; }
+  a { color:var(--cyan); } .muted { color:var(--muted); font-size:.92rem; }
+  nav a { margin-right:16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1><span class="ai">AI</span> <span class="pick">원픽</span></h1>
+  <p>매일 AI 소식을 1분으로 정리하는 YouTube 쇼츠 채널 · Daily 1-minute AI news Shorts</p>
+  <nav><a href="https://www.youtube.com/@aiwonpick">YouTube 채널</a><a href="privacy.html">개인정보처리방침 / Privacy</a><a href="terms.html">이용약관 / Terms</a></nav>
+
+  <h2>채널 소개</h2>
+  <div class="card">
+    AI 원픽은 20~40대 직장인·학생을 위해 ChatGPT, Claude, Gemini 등 AI 도구와 AI 뉴스를 1분 안에 비교·정리하고,
+    "그래서 무엇을 쓰면 되는지(원픽)"를 알려 주는 채널입니다. 영상은 공개된 기사를 근거로 작성하며, 채널 운영자가 매일 대본을 검토한 뒤 게시합니다.
+  </div>
+
+  <h2>About the AI Wonpick Uploader (YouTube API client)</h2>
+  <div class="card">
+    <p>AI Wonpick Uploader is a private, single-user desktop tool run by the channel owner on their own computer.
+    It is used only to manage the owner's own YouTube channel (<a href="https://www.youtube.com/@aiwonpick">@aiwonpick</a>).</p>
+    <p>Workflow: the tool drafts a short video from public AI news articles → <b>the channel owner reviews and approves the script</b> →
+    the tool renders the video and uploads it to the owner's channel with the YouTube Data API.</p>
+    <p>YouTube API features used: <code>videos.insert</code> (upload, scheduled publishing, AI/synthetic-content disclosure),
+    <code>thumbnails.set</code>, <code>commentThreads.insert</code> (one pinned-comment draft on the owner's own video),
+    <code>channelBanners.insert</code> / <code>channels.update</code> (the owner's own channel branding).</p>
+    <p>It does not access, collect, or display any other user's data, and it is not offered to other users.</p>
+  </div>
+
+  <p class="muted">문의 / Contact: smhwang0124@naver.com</p>
+</main>
+</body>
+</html>
